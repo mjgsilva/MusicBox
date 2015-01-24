@@ -10,6 +10,8 @@ import UIKit
 
 class PlaylistMasterViewController: UIViewController {
 
+    @IBOutlet weak var btn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +21,12 @@ class PlaylistMasterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPlaylistDetail" {
+            let playlistDetailController = segue.destinationViewController as PlaylistDetailViewController
+            playlistDetailController.segueLabel = "Yo!"
+        }
+    }
 }
 

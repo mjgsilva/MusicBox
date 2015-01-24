@@ -10,9 +10,12 @@ import UIKit
 
 class PlaylistDetailViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var segueLabel: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label.text = segueLabel
         // Do any additional setup after loading the view.
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6DF0231A72ED8F009320F6 /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DF0221A72ED8F009320F6 /* MusicLibrary.swift */; };
+		AC6DF0251A72F96F009320F6 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DF0241A72F96F009320F6 /* Playlist.swift */; };
 		AC8F403D1A7244060055B6B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F403C1A7244060055B6B9 /* AppDelegate.swift */; };
 		AC8F403F1A7244060055B6B9 /* PlaylistMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F403E1A7244060055B6B9 /* PlaylistMasterViewController.swift */; };
 		AC8F40421A7244060055B6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8F40401A7244060055B6B9 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC6DF0221A72ED8F009320F6 /* MusicLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		AC6DF0241A72F96F009320F6 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		AC8F40371A7244060055B6B9 /* MusicBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8F403B1A7244060055B6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC8F403C1A7244060055B6B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				AC8F403C1A7244060055B6B9 /* AppDelegate.swift */,
 				AC8F403E1A7244060055B6B9 /* PlaylistMasterViewController.swift */,
 				AC8F405E1A7245C90055B6B9 /* PlaylistDetailViewController.swift */,
+				AC6DF0221A72ED8F009320F6 /* MusicLibrary.swift */,
+				AC6DF0241A72F96F009320F6 /* Playlist.swift */,
 				AC8F40401A7244060055B6B9 /* Main.storyboard */,
 				AC8F40431A7244060055B6B9 /* Images.xcassets */,
 				AC8F40451A7244060055B6B9 /* LaunchScreen.xib */,
@@ -218,6 +224,8 @@
 				AC8F405F1A7245C90055B6B9 /* PlaylistDetailViewController.swift in Sources */,
 				AC8F403F1A7244060055B6B9 /* PlaylistMasterViewController.swift in Sources */,
 				AC8F403D1A7244060055B6B9 /* AppDelegate.swift in Sources */,
+				AC6DF0231A72ED8F009320F6 /* MusicLibrary.swift in Sources */,
+				AC6DF0251A72F96F009320F6 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MusicBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MusicBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
