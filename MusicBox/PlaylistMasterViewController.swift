@@ -12,6 +12,8 @@ class PlaylistMasterViewController: UIViewController {
 
     @IBOutlet weak var btn: UIButton!
     
+    let library: MusicLibrary = MusicLibrary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +27,7 @@ class PlaylistMasterViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaylistDetail" {
             let playlistDetailController = segue.destinationViewController as PlaylistDetailViewController
-            playlistDetailController.segueLabel = "Yo!"
+            playlistDetailController.playlist = library.getPlaylist(idx: 0)
         }
     }
 }

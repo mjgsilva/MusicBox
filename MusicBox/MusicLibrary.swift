@@ -10,7 +10,7 @@ import Foundation
 
 struct MusicLibrary {
     
-    let library: [Playlist] = [
+    private let library: [Playlist] = [
         Playlist(title: "Rise and Shine",
             description: "Get your morning going by singing along to these classic tracks as you hit the shower bright and early!",
             icon: "coffee.pdf",
@@ -54,4 +54,8 @@ struct MusicLibrary {
             color: ["red": 255, "green": 102, "blue": 153, "alpha": 1.0]
         )
     ]
+    
+    func getPlaylist(#idx: Int) -> Playlist {
+        return library[idx]
+    }
 }

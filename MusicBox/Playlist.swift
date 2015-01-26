@@ -27,7 +27,7 @@ struct Playlist {
         self.backgroundColor = rgbColorFromDictionary(color)
     }
     
-    func rgbColorFromDictionary(colorDictionary: [String:CGFloat]) -> UIColor {
+    private func rgbColorFromDictionary(colorDictionary: [String:CGFloat]) -> UIColor {
         let red = colorDictionary["red"]!
         let green = colorDictionary["green"]!
         let blue = colorDictionary["blue"]!

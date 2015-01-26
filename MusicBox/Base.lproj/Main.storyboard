@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sAa-rK-7C0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Playlists-->
@@ -26,7 +27,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3294117647" green="0.67450980390000004" blue="0.82352941180000006" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="ycW-lu-PFu"/>
                     <connections>
@@ -49,32 +50,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You haven't pressed the button!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-ot-css">
-                                <rect key="frame" x="38" y="273" width="244" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="TCj-VI-cAJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TCj-VI-cAJ" secondAttribute="height" multiplier="32:29" id="bud-SX-fzg"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTT-aq-mPw">
+                                <rect key="frame" x="0.0" y="234" width="320" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9r-t0-ONm">
+                                        <rect key="frame" x="20" y="10" width="31" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get your morning going by singing along to these classic tracks as you hit the shower bright and early!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-3M-Zf1">
+                                        <rect key="frame" x="20" y="39" width="280" height="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lr9-3M-Zf1" firstAttribute="leading" secondItem="FTT-aq-mPw" secondAttribute="leading" constant="20" id="2zg-JM-RlE"/>
+                                    <constraint firstAttribute="trailing" secondItem="lr9-3M-Zf1" secondAttribute="trailing" constant="20" id="4m7-oZ-uuk"/>
+                                    <constraint firstAttribute="width" secondItem="FTT-aq-mPw" secondAttribute="height" multiplier="8:3" id="Xsd-Jj-4aU"/>
+                                    <constraint firstItem="lr9-3M-Zf1" firstAttribute="top" secondItem="f9r-t0-ONm" secondAttribute="bottom" constant="8" id="iBD-l8-wOn"/>
+                                    <constraint firstItem="f9r-t0-ONm" firstAttribute="leading" secondItem="FTT-aq-mPw" secondAttribute="leading" constant="20" id="pTx-pZ-P4B"/>
+                                    <constraint firstItem="f9r-t0-ONm" firstAttribute="top" secondItem="FTT-aq-mPw" secondAttribute="top" constant="10" id="sRP-JG-ETn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Neh-gM-LXo">
+                                <rect key="frame" x="0.0" y="354" width="320" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Neh-gM-LXo" secondAttribute="height" multiplier="160:107" id="JUv-uQ-X6V"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="NyO-Ki-u3O" id="xGQ-8H-qL2"/>
+                                    <outlet property="delegate" destination="NyO-Ki-u3O" id="9mX-lg-Ud0"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TCj-VI-cAJ" firstAttribute="top" secondItem="nUQ-4N-B4s" secondAttribute="bottom" id="2Jh-3p-4GB"/>
+                            <constraint firstAttribute="trailing" secondItem="Neh-gM-LXo" secondAttribute="trailing" id="EJf-zp-qqp"/>
+                            <constraint firstAttribute="trailing" secondItem="TCj-VI-cAJ" secondAttribute="trailing" id="HC8-nU-N9j"/>
+                            <constraint firstItem="FTT-aq-mPw" firstAttribute="bottom" secondItem="TCj-VI-cAJ" secondAttribute="bottom" id="S7B-xd-aUf"/>
+                            <constraint firstItem="PCn-FP-kFz" firstAttribute="top" secondItem="Neh-gM-LXo" secondAttribute="bottom" id="cht-hg-BBu"/>
+                            <constraint firstItem="Neh-gM-LXo" firstAttribute="leading" secondItem="ieQ-je-P6c" secondAttribute="leading" id="eIk-9u-5Ry"/>
+                            <constraint firstAttribute="trailing" secondItem="FTT-aq-mPw" secondAttribute="trailing" id="iz8-8i-hW7"/>
+                            <constraint firstItem="Neh-gM-LXo" firstAttribute="top" secondItem="FTT-aq-mPw" secondAttribute="bottom" id="mX5-GY-Rpy"/>
+                            <constraint firstItem="FTT-aq-mPw" firstAttribute="leading" secondItem="ieQ-je-P6c" secondAttribute="leading" id="rxW-Je-w10"/>
+                            <constraint firstItem="TCj-VI-cAJ" firstAttribute="leading" secondItem="ieQ-je-P6c" secondAttribute="leading" id="tyx-d6-cG4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Artists" id="neM-zT-Yy9"/>
                     <connections>
-                        <outlet property="label" destination="Nfp-ot-css" id="0tG-mc-fqL"/>
+                        <outlet property="artists" destination="Neh-gM-LXo" id="Z7g-Bs-336"/>
+                        <outlet property="playlistCoverImage" destination="TCj-VI-cAJ" id="sFr-cx-fIt"/>
+                        <outlet property="playlistDescription" destination="lr9-3M-Zf1" id="vph-Jj-ySt"/>
+                        <outlet property="playlistTitle" destination="f9r-t0-ONm" id="cp5-9z-FXi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAr-JJ-Qcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="379"/>
+            <point key="canvasLocation" x="892" y="385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="860-US-tdh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sAa-rK-7C0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kkb-K6-Bz5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="kkb-K6-Bz5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -86,6 +140,9 @@
             <point key="canvasLocation" x="22" y="379"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="66" height="73"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
