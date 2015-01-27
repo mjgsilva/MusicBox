@@ -23,7 +23,6 @@ class PlaylistDetailViewController: UIViewController, UITableViewDataSource {
         if playlist != nil {
             self.assingDataToLabels()
         }
-        //tableView.reloadData()
         
     }
 
@@ -37,7 +36,8 @@ class PlaylistDetailViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-       cell.textLabel?.textColor = UIColor.whiteColor()
+       
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 12)
         
         cell.textLabel?.text = playlist!.artists[indexPath.row]
