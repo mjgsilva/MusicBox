@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        let colorView = UIView()
-        colorView.backgroundColor = UIColor.redColor()
         
-        UITableViewCell.appearance().backgroundColor = UIColor(red: 45/255.0, green: 47/255.0, blue: 51/255.0, alpha: 1)
+        let colorView = UIView()
+        colorView.backgroundColor = UIColor(red: 45/255.0, green: 47/255.0, blue: 51/255.0, alpha: 1)
+
+        UITableViewCell.appearance().backgroundColor = colorView.backgroundColor
+        UITableViewCell.appearance().selectedBackgroundView = colorView
         
         return true
     }
