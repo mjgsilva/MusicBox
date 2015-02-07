@@ -16,6 +16,8 @@
 		AC8F40471A7244060055B6B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8F40451A7244060055B6B9 /* LaunchScreen.xib */; };
 		AC8F40531A7244060055B6B9 /* MusicBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F40521A7244060055B6B9 /* MusicBoxTests.swift */; };
 		AC8F405F1A7245C90055B6B9 /* PlaylistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F405E1A7245C90055B6B9 /* PlaylistDetailViewController.swift */; };
+		ACBB8DCF1A8593AC00CDD35D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB8DC31A85498600CDD35D /* PlayerViewController.swift */; };
+		ACBB8DD41A8681E900CDD35D /* birds.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACBB8DD31A8681E900CDD35D /* birds.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		AC8F40511A7244060055B6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC8F40521A7244060055B6B9 /* MusicBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBoxTests.swift; sourceTree = "<group>"; };
 		AC8F405E1A7245C90055B6B9 /* PlaylistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistDetailViewController.swift; sourceTree = "<group>"; };
+		ACBB8DC31A85498600CDD35D /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		ACBB8DD31A8681E900CDD35D /* birds.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = birds.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 		AC8F40391A7244060055B6B9 /* MusicBox */ = {
 			isa = PBXGroup;
 			children = (
+				ACBB8DD31A8681E900CDD35D /* birds.wav */,
 				AC8F403C1A7244060055B6B9 /* AppDelegate.swift */,
 				AC8F403E1A7244060055B6B9 /* PlaylistMasterViewController.swift */,
 				AC8F405E1A7245C90055B6B9 /* PlaylistDetailViewController.swift */,
+				ACBB8DC31A85498600CDD35D /* PlayerViewController.swift */,
 				AC6DF0221A72ED8F009320F6 /* MusicLibrary.swift */,
 				AC6DF0241A72F96F009320F6 /* Playlist.swift */,
 				AC8F40401A7244060055B6B9 /* Main.storyboard */,
@@ -202,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8F40421A7244060055B6B9 /* Main.storyboard in Resources */,
+				ACBB8DD41A8681E900CDD35D /* birds.wav in Resources */,
 				AC8F40471A7244060055B6B9 /* LaunchScreen.xib in Resources */,
 				AC8F40441A7244060055B6B9 /* Images.xcassets in Resources */,
 			);
@@ -226,6 +233,7 @@
 				AC8F403D1A7244060055B6B9 /* AppDelegate.swift in Sources */,
 				AC6DF0231A72ED8F009320F6 /* MusicLibrary.swift in Sources */,
 				AC6DF0251A72F96F009320F6 /* Playlist.swift in Sources */,
+				ACBB8DCF1A8593AC00CDD35D /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

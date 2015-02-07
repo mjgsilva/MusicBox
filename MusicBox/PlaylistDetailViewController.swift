@@ -30,6 +30,16 @@ class PlaylistDetailViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "playTrack" {
+            let playerViewController = segue.destinationViewController as PlayerViewController
+            let selectedIndex = artists.indexPathForSelectedRow()
+            playerViewController.file = "birds"
+            playerViewController.cover = playlist!.icon
+            playerViewController.artist = playlist!.artists[selectedIndex!.row]
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlist!.artists.count
     }
@@ -43,6 +53,12 @@ class PlaylistDetailViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = playlist!.artists[indexPath.row]
 
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("playTrack", sender: nil)
+        
     }
     
     private func assingDataToLabels() -> Void {
