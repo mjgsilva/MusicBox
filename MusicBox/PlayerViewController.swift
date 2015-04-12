@@ -45,7 +45,7 @@ class PlayerViewController: UIViewController, AVAudioPlayerDelegate {
     func verifyFile() -> Void {
         let audioPath = NSString(string: NSBundle.mainBundle().pathForResource(file, ofType: "wav")!)
         var error: NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath), error: &error)
+        audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(string: audioPath as String), error: &error)
         
         if error == nil {
             setArtist()

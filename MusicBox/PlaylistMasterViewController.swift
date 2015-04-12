@@ -41,9 +41,9 @@ class PlaylistMasterViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaylistDetail" {
-            let playlistImageView = sender!.view as UIImageView
+            let playlistImageView = sender!.view as! UIImageView
             if let index = find(playlistsArray, playlistImageView) {
-                let playlistDetailController = segue.destinationViewController as PlaylistDetailViewController
+                let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
                 playlistDetailController.playlist = library.getPlaylist(idx: index)
             }
 

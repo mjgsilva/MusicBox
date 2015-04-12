@@ -32,7 +32,7 @@ class PlaylistDetailViewController: UIViewController, UITableViewDataSource {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "playTrack" {
-            let playerViewController = segue.destinationViewController as PlayerViewController
+            let playerViewController = segue.destinationViewController as! PlayerViewController
             let selectedIndex = artists.indexPathForSelectedRow()
             playerViewController.file = "birds"
             playerViewController.cover = playlist!.icon
